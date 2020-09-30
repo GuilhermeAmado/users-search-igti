@@ -38,3 +38,50 @@ function handleKeyUp() {
     console.log(query);
     filteredUsers = users.filter(user => user.name.toLowerCase().includes(query));
 }
+
+// No painel da esquerda, listar os usuários filtrados
+function renderUserList() {
+    usersContainer.innerHTML = '';
+
+    filteredUsers.forEach(user => {
+        let html = `
+            <div class="user-card">
+                <img src="${user.pictureURL}" alt="">
+                <h3>${user.name}</h3>
+                <p>${user.age} anos</p>
+            </div>
+        `;
+
+        usersContainer.insertAdjacentHTML('beforeend', html);
+    });
+}
+
+// No painel da direita, calcular e mostrar algumas estatísticas sobre esses usuários
+function renderStatistics() {
+    let maleCount = filteredUsers.reduce((tally, user) => {
+        return tally + (user.gender === 'male');
+    }, 0);
+
+    let femaleCount = filteredUsers.reduce((tally, user) => {
+        return tally + (user.gender === 'female');
+    }, 0);
+
+    let ageSum = filteredUsers.reduce((tally, user) => {
+        return tally + (user.age);
+    }, 0);
+
+    let ageMedian = Number((ageSum / (maleCount + femaleCount)).toFixed(2));
+
+    usersStatistics.innerHTML = `
+        <h2>Estatísticas</h2>
+        <p>Sexo masculino: <strong>${maleCount || 0}</strong></p>
+        <p>Sexo feminino: <strong>${femaleCount || 0}</strong></p>
+        <p>Soma das idades: <strong>${ageSum || 0}</strong></p>
+        <p>Média das idades: <strong>${ageMedian || 0}</strong></p>
+    `;
+
+    console.log(maleCount);
+    console.log(femaleCount);
+    console.log(ageSum);
+    console.log(ageMedian);
+}
