@@ -85,3 +85,19 @@ function renderStatistics() {
     console.log(ageSum);
     console.log(ageMedian);
 }
+
+function init() {
+    getData().catch(err => console.log(err));
+    renderStatistics();
+}
+
+// O usuário poderá filtrar os dados tanto digitando "Enter" quanto clicando no botão correspondente
+searchForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    renderUserList();
+    renderStatistics();
+})
+
+searchInput.addEventListener('keyup', handleKeyUp);
+
+window.addEventListener('load', init);
