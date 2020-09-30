@@ -1,15 +1,14 @@
 # Users Search
 
 Uma aplicação que busca dados de usuários em uma API e é possível filtrar os usuários de acordo com o texto digitado no campo de texto.
+Após filtrar os usuários, é exibido um bloco com estatísticas dos usuários filtrados.
 Desenvolvida para o Bootcamp Desenvolvedor Fullstack da IGTI onde foram propostas as funcionalidades da aplicação.
 
 
 # What I Learned
 
-* Aprendi a desenvolver uma aplicação full stack do zero
-* Usar o node e express para desenvolvimento rápido de um servidor
-* Utilizar uma template engine para renderizar conteúdos dinâmicos
-* Configuração de um banco de dados SQL simples
+* HTTP Requisitions
+* Array methods
 
 # Screenshot of the project
 ![Alt text](/screenshot.png?raw=true "Optional Title")
