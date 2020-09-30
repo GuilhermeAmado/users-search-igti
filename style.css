@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f7f7;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 54px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+  }
+  
+.loader img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.search {
+    width: 400px;
+    border: 3px solid #deb887;
+    border-right: none;
+    padding: 5px 20px;
+    height: 48px;
+    border-radius: 15px 0 0 15px;
+    outline: none;
+    color: #000;
+    font-family: inherit;
+    font-size: 24px;
+}
+
+.search-button {
+    width: 100px;
+    height: 48px;
+    border: 3px solid #deb887;
+    background-color: #deb887;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    transition: all 250ms;
+    /* backface-visibility: hidden; */
+}
+
+.search-button:hover {
+    background-color: #d3a15f;
+    border: 3px solid #d3a15f;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.users-container {
+    margin-bottom: 100px;
+    flex: 0 0 600px;
+    border-radius: 10px 0 0 10px;
+}
+
+.user-card {
+    margin: 0px auto 10px;
+    padding: 15px;
+    max-width: 400px;
+    min-width: 300px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: -1px 6px 10px -4px rgba(0,0,0,0.3);
+    transition: transform 250ms;
+}
+
+.user-card:hover {
+    transform: scale(1.03);
+}
+
+.user-card img {
+    margin-left: 10px;
+    max-width: 60px;
+    border-radius: 50%;
+}
+
+.user-card h3 {
+    width: 55%;
+    margin-left: 25px;
+}
+
+.user-card p {
+    width: 20%;
+}
+
+.users-statistics {
+    position: sticky;
+    top: 100px;
+    margin-left: 50px;
+    padding: 15px 20px;
+    max-width: 400px;
+    min-width: 200px;
+    background-color: #fff;
+    border-radius: 25px;
+    border-right: 25px solid #deb887;
+    box-shadow: -1px 6px 10px -4px rgba(0,0,0,0.3);
+    align-self: flex-start;
+}
