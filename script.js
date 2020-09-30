@@ -30,3 +30,11 @@ async function getData() {
 
     loader.hidden = true;
 }
+
+// Permitir a filtragem de usuários através de um input com interação do usuário
+// O usuário poderá filtrar dados quando digitar pelo menos um caractere no input
+function handleKeyUp() {
+    let query = searchInput.value.toLowerCase();
+    console.log(query);
+    filteredUsers = users.filter(user => user.name.toLowerCase().includes(query));
+}
