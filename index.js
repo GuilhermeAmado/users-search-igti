@@ -35,6 +35,7 @@ async function getData() {
 // O usuário poderá filtrar dados quando digitar pelo menos um caractere no input
 function handleKeyUp() {
     let query = searchInput.value.toLowerCase();
+    console.log(query);
     filteredUsers = users.filter(user => user.name.toLowerCase().includes(query));
 }
 
@@ -78,6 +79,11 @@ function renderStatistics() {
         <p>Soma das idades: <strong>${ageSum || 0}</strong></p>
         <p>Média das idades: <strong>${ageMedian || 0}</strong></p>
     `;
+
+    console.log(maleCount);
+    console.log(femaleCount);
+    console.log(ageSum);
+    console.log(ageMedian);
 }
 
 function init() {
