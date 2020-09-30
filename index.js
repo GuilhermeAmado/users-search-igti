@@ -9,11 +9,11 @@ let users = [];
 let filteredUsers = [];
 
 async function getData() {
-    // const PROXY = 'https://cors-anywhere.herokuapp.com/';
+    const PROXY = 'https://cors-anywhere.herokuapp.com/';
     const API_URL = 'https://randomuser.me/api/?seed=javascript&results=100&nat=BR&noinfo';
     let data = [];
 
-    data = await fetch(API_URL);
+    data = await fetch(PROXY + API_URL);
     dataJSON = await data.json();
 
     // Carregar os dados dos usuários em um array
